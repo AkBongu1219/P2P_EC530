@@ -35,3 +35,8 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
 
  - python p2p.py
  - Follow terminal instructions
+
+- Python 3.7+
+- Dependencies:
+  ```bash
+  pip install plyer
