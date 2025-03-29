@@ -20,12 +20,12 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
   Desktop notifications for incoming messages (macOS and cross-platform via plyer).
 
 ## Files and Structure
-
+```bash
 ├── p2p.py              # Main P2P messaging implementation
 ├── test_p2p.py         # Unit tests for the messaging system
 ├── requirements.txt         # Dependencies
 ├── messages.db         # SQLite database file (generated automatically)
-
+```
 ## Getting started
 
 - Python 3.7+
@@ -36,7 +36,4 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
  - python p2p.py
  - Follow terminal instructions
 
-- Python 3.7+
-- Dependencies:
-  ```bash
-  pip install plyer
+
