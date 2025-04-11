@@ -25,6 +25,7 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
 ├── test_p2p.py         # Unit tests for the messaging system
 ├── requirements.txt         # Dependencies
 ├── messages.db         # SQLite database file (generated automatically)
+├── setup.py         # Allows for local pip installation
 ```
 ## Getting started
 
