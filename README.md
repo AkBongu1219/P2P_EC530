@@ -36,4 +36,22 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
  - python p2p.py
  - Follow terminal instructions
 
+## Install via PIP (Local)
+
+You can also install the package locally:
+
+```bash
+python -m build
+pip install dist/p2p_ec530-0.1.0-py3-none-any.whl
+```
+
+Then run the CLI with:
+
+```bash
+p2p-cli
+```
+Follow terminal instructions
+
+
+
 
