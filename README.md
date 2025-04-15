@@ -59,7 +59,7 @@ Glad it worked! Here's a clean, copy-paste-ready **Docker section** for your `RE
 
 ---
 
-## 🐳 Dockerization
+## Dockerization
 
 This project can be run inside a Docker container for portability and ease of setup.
 
@@ -71,7 +71,7 @@ From the root of the project directory (where the `Dockerfile` is located), run:
 docker build -t p2p-messenger .
 ```
 
-### 🚀 Run the Application
+### Run the Application
 
 To run the P2P messaging app interactively:
 
@@ -81,7 +81,7 @@ docker run -it --rm p2p-messenger
 
 You will be prompted to enter your nickname and can begin interacting with other peers.
 
-### 🧪 Run Unit Tests
+### Run Unit Tests
 
 To run the included unit tests inside Docker:
 
