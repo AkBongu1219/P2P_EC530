@@ -21,6 +21,8 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
 
 ## Files and Structure
 ```bash
+├── Dockerfile              # Docker configuration
+├── .dockerignore          # Docker ignore rules
 ├── p2p.py              # Main P2P messaging implementation
 ├── test_p2p.py         # Unit tests for the messaging system
 ├── requirements.txt         # Dependencies
@@ -52,6 +54,41 @@ Then run the CLI with:
 p2p-cli
 ```
 Follow terminal instructions
+
+Glad it worked! Here's a clean, copy-paste-ready **Docker section** for your `README.md`:
+
+---
+
+## 🐳 Dockerization
+
+This project can be run inside a Docker container for portability and ease of setup.
+
+### 🔧 Build the Docker Image
+
+From the root of the project directory (where the `Dockerfile` is located), run:
+
+```bash
+docker build -t p2p-messenger .
+```
+
+### 🚀 Run the Application
+
+To run the P2P messaging app interactively:
+
+```bash
+docker run -it --rm p2p-messenger
+```
+
+You will be prompted to enter your nickname and can begin interacting with other peers.
+
+### 🧪 Run Unit Tests
+
+To run the included unit tests inside Docker:
+
+```bash
+docker run --rm p2p-messenger python3 test_p2p.py
+```
+
 
 
 
