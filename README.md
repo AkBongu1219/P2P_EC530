@@ -35,6 +35,14 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
 - Python 3.7+
 - pip install -r requirements.txt
 
+### For p2p_redis.py
+
+```bash
+brew update
+brew install redis
+brew services start redis
+```
+
 ## Usage
 
  - python p2p.py (or) python3 p2p_redis.py
