@@ -24,6 +24,7 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
 ├── Dockerfile              # Docker configuration
 ├── .dockerignore          # Docker ignore rules
 ├── p2p.py              # Main P2P messaging implementation
+├── p2p_redis.py              # P2P messaging implementation using redis
 ├── test_p2p.py         # Unit tests for the messaging system
 ├── requirements.txt         # Dependencies
 ├── messages.db         # SQLite database file (generated automatically)
@@ -36,7 +37,7 @@ This Python project implements a local Peer-to-Peer (P2P) messaging system with 
 
 ## Usage
 
- - python p2p.py
+ - python p2p.py (or) python3 p2p_redis.py
  - Follow terminal instructions
 
 ## Install via PIP (Local)
