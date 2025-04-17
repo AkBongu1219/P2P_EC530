@@ -179,8 +179,29 @@ class Peer:
             print(f" - {ch.decode()}")
 
     def list_listeners(self, topic):
-        num = self.redis.execute_command('PUBSUB NUMSUB', topic)[1]
-        print(f"Subscribers on {topic}: {num}")
+        try:
+            result = self.redis.execute_command('PUBSUB NUMSUB', topic)
+            
+            if len(result) > 0:
+                if isinstance(result[0], tuple):
+                    # Handle case where result is a tuple
+                    for channel_tuple in result:
+                        channel, count = channel_tuple
+                        channel_name = channel.decode() if isinstance(channel, bytes) else channel
+                        print(f"Subscribers on {channel_name}: {count}")
+                else:
+                    # Handle case where result is a flat list [channel, count, channel, count, ...]
+                    i = 0
+                    while i < len(result):
+                        channel = result[i]
+                        count = result[i+1] if i+1 < len(result) else 0
+                        channel_name = channel.decode() if isinstance(channel, bytes) else channel
+                        print(f"Subscribers on {channel_name}: {count}")
+                        i += 2
+        except Exception as e:
+            print(f"Error getting listeners: {e}")
+            # Simple fallback that should work in most cases
+            print(f"Subscribers on {topic}: {self.redis.pubsub_numsub(topic)}")
 
     def server_thread(self):
         print(f"P2P server started on port {self.port}")
